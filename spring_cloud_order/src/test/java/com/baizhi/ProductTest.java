@@ -12,7 +12,10 @@ import java.util.List;
 @SpringBootTest("Application.class")
 @RunWith(SpringRunner.class)
 public class ProductTest {
-
+    @Test
+    public void test(){
+        System.out.println("2134");
+    }
 
 
 }
