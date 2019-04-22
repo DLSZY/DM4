@@ -1,0 +1,29 @@
+server:
+  port: 8991
+  jsp-servlet:
+    init-parameters:
+      development: true
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/spring_cloud_app
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  application:
+    name: eureka-order
+
+mybatis:
+  type-aliases-package: com.baizhi.entity
+  mapper-locations: classpath:com/baizhi/mapper/*.xml
+
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://node:8989/eureka
+  instance:
+    prefer-ip-address: true
